@@ -8,6 +8,7 @@
     "angular-ui-router": "^0.2.18",
     "express": "^4.13.4",
     "mongoose": "^4.4.16",
+    "express": "^4.13.4",
     "request-promise": "^3.0.0",
     "websocket": "^1.0.22"
   },
