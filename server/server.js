@@ -11,5 +11,7 @@ app.use(express.static(__dirname + "/../node_modules"));
 
 require('./middleware/middleware.js')(app, express);
 
+require('./middleware/middleware.js')(app, express);
+
 app.listen(port);
 console.log('Server listening on ' + port);
