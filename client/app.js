@@ -1,4 +1,4 @@
-angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home', 'neighborhoodwatch.signin', 'neighborhoodwatch.newuser'])
+angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home', 'neighborhoodwatch.signin', 'neighborhoodwatch.newuser', 'neighborhoodwatch.crimeinfo'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 

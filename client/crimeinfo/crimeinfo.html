@@ -1,0 +1,16 @@
+<div>
+  <table>
+    <th>Type</th>
+    <th>Time</th>
+    <th>Reported By</th>
+    <th>Zip Code</th>
+    <th>Additional Comments</th><br>
+    <tr ng-repeat="stat in stats">
+      <td>{{stat.type}}</td>
+      <td>{{stat.time}}</td>
+      <td>{{stat.reported}}</td>
+      <td>{{stat.zip}}</td>
+      <td>{{stat.add}}</td>
+    </tr>
+  </table>
+</div>
