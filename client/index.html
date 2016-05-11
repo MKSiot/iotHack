@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="neighborhoodwatch">
+  <head>
+    <script src="angular/angular.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="home/home.js"></script>
+    <script src="signin/signin.js"></script>
+    <script src="newuser/newuser.js"></script>
+    <script src="video/video.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <button ui-sref="video">Video View</button>
+      </div>
+      <div ui-view></div>
+
+    </div>
+
+  </body>
+</html>
