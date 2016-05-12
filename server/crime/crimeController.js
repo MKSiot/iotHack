@@ -1,26 +1,22 @@
 var Crime = require('./crimeModel.js');
 
-var crimeTest = {};
-crimeTest.type = "Murder";
-crimeTest.message = "Help! He's coming for me next!";
-crimeTest.time = Date.now();
-crimeTest.reportedBy = "John Smith";
-crimeTest.phoneNumber = 5551234567;
-crimeTest.zipCode = 12345;
-
 module.exports = {
-
   getAllCrimes: function(req, res, next){
+
     var findAllCrimes = Crime.find({}, function(err, docs){
-      if(err) throw err;
-      res.send(docs);
+      if(err){
+        throw err;
+      }
+      console.log(docs);
+      res.send(docs); //Make sure sending properly
     })
   },
-
   addNewCrime: function(req, res, next){
-    var newCrime = new Crime(req.body);
-    // var newCrime = new Crime(crimeTest);
-    newCrime.save()
+    req.body.time = Date.now();
+    console.log('body', req.body);
+    var test = new Crime(req.body);
+    
+    test.save()
     .then(function(){
       res.status(200).send();
     })
@@ -28,6 +24,5 @@ module.exports = {
       res.status(400).send();
       next(err);
     });
-
   }
 }

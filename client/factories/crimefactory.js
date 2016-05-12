@@ -14,16 +14,16 @@ angular.module('neighborhoodwatch.crimeServices', [])
       });
     };
 
-    crimes.addNewCrime = function (crime) {
+    crimes.addNewCrime = function (crime, cb) {
       return $http({
         method: 'POST',
         url: '/api/crimes/addNewCrime',
         data: crime
       })
-      .then(function (res) {
-        return res.data;
-      }, function (res) {
-        console.error('Error: ', res);
+      .then(function (result) {
+        cb(result);
+      }, function (err) {
+        console.error('Error: ', err);
       });
     };
 
