@@ -6,7 +6,7 @@ angular.module('neighborhoodwatch.crimeform', [])
     $scope.report = {};
 
     $scope.submit = function(){
-      Crimes.addNewCrime(report);
+      Crimes.addNewCrime($scope.report);
       $state.go('video');
     };
     
