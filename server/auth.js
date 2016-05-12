@@ -49,10 +49,9 @@ const format_headers = (token, service) => {
   return {
     uri: services[service].url,
     headers: {
-      'Authorization' : 'Basic ' + encodeCredentials(),
+      'Authorization' : 'Bearer ' + token,
       'Predix-Zone-Id': services[service].zoneId
-    },
-    json: true
+    }
   };
 };
 

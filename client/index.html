@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html ng-app="neighborhoodwatch">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <button ui-sref="home">Home</button>
+        <button ui-sref="video">Video View</button>
+        <button ui-sref="crimeInfo">Crime Info View</button>
+      </div>
+      <div ui-view></div>
+
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBff-T7Dol5atGYYWd3pUGxsSNZJ8s2Ocg"></script>
+
+    <script src="angular/angular.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="factories/crimefactory.js"></script>
+    <script src="factories/userfactories.js"></script>
+    
+    <script src="home/home.js"></script>
+    <script src="signin/signin.js"></script>
+    <script src="newuser/newuser.js"></script>
+    <script src="video/video.js"></script>
+    <script src="crimeinfo/crimeinfo.js"></script>
+    <script src="crimeform/crimeform.js"></script>
+    
+    <script src="app.js"></script>
+  </body>
+
+</html>
