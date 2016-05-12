@@ -1,16 +1,42 @@
 <!DOCTYPE HTML>
 <html ng-app="neighborhoodwatch">
   <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   </head>
   <body>
+
     <div>
-      <div>
+
+      <nav class="navbar navbar-inverse" style="margin-bottom: 0">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <image src="assets/logo.jpg" class="navbar-brand" ui-sref="home"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+               <li><a ui-sref="video">Video <span class="sr-only">(current)</span></a></li>
+        <li><a ui-sref="crimeInfo">Crime Stats</a></li>
+              </ul>
+      
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+ <!--      <div>
         <button ui-sref="home">Home</button>
         <button ui-sref="video">Video View</button>
         <button ui-sref="crimeInfo">Crime Info View</button>
-      </div>
+      </div> -->
+
+
+
       <div ui-view></div>
 
     </div>

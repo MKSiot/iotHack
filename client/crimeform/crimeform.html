@@ -1,9 +1,31 @@
-<div>
+<style type="text/css">
+#crimeform {
+   background-image: url('assets/grey-background.jpg');
+  height: 100vh;
+  width:100%;
+
+}
+
+#crimeform input{
+  display: block;
+
+}
+
+.inner {
+    width: 50%;
+    margin: 0 auto; 
+}
+
+</style>
+
+<div id="crimeform" class="container">
+  <div class="inner">
   <input ng-model='report.message' placeholder='Enter message' type='text'>
   <input ng-model='report.type' placeholder='Crime type' type='text'>
   <input ng-model='report.reportedBy' placeholder='Anonymous' type='text'>
   <input ng-model='report.zipCode' placeholder='zipCode' type='text'>
   <input ng-model='report.phoneNumber' placeholder='phoneNumber' type='number'>
   <input ng-model='report.email' placeholder='email' type='email'>
-  <button class='btn btn-default' ng-click='submit()'>Submit</button>
+  <button class='btn btn-danger' ng-click='submit()'>Submit</button>
+  </div>
 </div>
