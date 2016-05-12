@@ -1,6 +1,26 @@
-<div>
-  <button ng-click="signIn()">Sign In</button>
-</div>
-<div>
-  <button ng-click="signUp()">Sign Up</button>
+<style type="text/css">
+#home {
+  background-image : url(/assets/background.jpg);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home-container{
+  margin-top: 100px;
+}
+</style>
+
+<div id="home">
+  <div class="home-container">
+    <div>
+      <button class="btn btn-default" ng-click="signIn()">Sign In</button>
+    </div>
+    <div>
+      <button class="btn btn-default" ng-click="signUp()">Sign Up</button>
+    </div>
+  </div>
 </div>

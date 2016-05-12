@@ -1,4 +1,22 @@
-<button ng-click="report()">Submit Report</button>
-<div id="map"></div>
-<div class="video-container">
+<style type="text/css">
+
+#video-page {
+  background-image: url('assets/grey-background.jpg');
+  height: 100vh;
+}
+
+</style>
+
+<div id="video-page">
+  <div class="container"  class="col-md-12">
+    <div class="col-md-5" id="map"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5 video-container"></div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="container">
+  <button class="btn btn-danger"ng-click="report()">Submit Report</button>
+  </div>
+
 </div>
