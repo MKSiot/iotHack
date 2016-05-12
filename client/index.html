@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html ng-app="neighborhoodwatch">
+  <head>
+  </head>
+  <body>
+    <div>
+      <div>
+        <button ui-sref="home">Home</button>
+        <button ui-sref="video">Video View</button>
+        <button ui-sref="crimeInfo">Crime Info View</button>
+      </div>
+      <div ui-view></div>
+
+    </div>
+
+    <script src="angular/angular.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="factories/crimefactory.js"></script>
+    <script src="factories/userfactories.js"></script>
+    
+    <script src="home/home.js"></script>
+    <script src="signin/signin.js"></script>
+    <script src="newuser/newuser.js"></script>
+    <script src="video/video.js"></script>
+    <script src="crimeinfo/crimeinfo.js"></script>
+    <script src="crimeform/crimeform.js"></script>
+    
+    <script src="app.js"></script>
+  </body>
+
+</html>

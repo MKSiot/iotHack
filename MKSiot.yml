@@ -1,0 +1,16 @@
+---
+applications:
+- name: MKSiotTest-Predix-App
+  memory: 128M
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  #command:  DEBUG=express:* node app.js
+  command:  node server/server.js
+services:
+ - MKSiotTest-uaa-instance
+env:
+    node_env: cloud
+    uaa_service_label : predix-uaa
+    clientId: admin01
+    base64ClientCredential: cGFzc3dvcmQ=
+    # Following properties configured only for Timeseries WindData service Integration
+    #windServiceUrl: "{URL of the microservice <your-name>-winddata-timeseries-service}, e.g.  https://your-name-winddata-timeseries-service.run.asw-usw02-pr.predix.io"
