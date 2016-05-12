@@ -1,22 +1,31 @@
 
   angular.module('neighborhoodwatch.crimeform', [])
-  .controller('crimeform', ['Crimes', function(Crimes){
+  .controller('crimeform', ['$scope','Crimes', '$state', function($scope, Crimes, $state){
 
-    formData = {};
+    $scope.formData = {};
 
     //current user info
-    reportedBy = '';
+    $scope.reportedBy = 'Ting';
 
-    type = '';
-    message = '';
-    zipCode = 0;
-    phoneNumber = 0;
+    $scope.type = '';
+    $scope.message = '';
+    $scope.zipCode = 94017;
+    $scope.phoneNumber = 4158919922;
 
-    submit = function(){
+    $scope.submit = function(){
       Crimes.addNewCrime({
-        message : message,
-        type : type,
-        zipCode : zipCode
-      })
+        type : $scope.type,
+        message : $scope.message,
+        // time : Date.now(),
+        reportedBy : $scope.reportedBy,
+        phoneNumber : $scope.phoneNumber,
+        zipCode : $scope.zipCode,
+
+      }, function(result){
+        console.log(result);
+      });
+
+      $state.go('video');
+
     }
   }]);

@@ -11,7 +11,4 @@ module.exports = function(app, express){
   require('../crime/crimeRoutes.js')(crimeRouter);
   require('../user/userRoutes.js')(userRouter);
 
-  const dataRouter = express.Router();
-  require('.routes/dataRoutes.js')(dataRouter);
-
 }
