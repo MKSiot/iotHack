@@ -15,12 +15,21 @@
     <th>Reported By</th>
     <th>Zip Code</th>
     <th>Additional Comments</th><br>
-    <tr ng-repeat="stat in stats">
+<!--     <tr ng-repeat="stat in stats">
       <td>{{stat.type}}</td>
       <td>{{stat.time}}</td>
       <td>{{stat.reported}}</td>
       <td>{{stat.zip}}</td>
       <td>{{stat.add}}</td>
+    </tr> -->
+    <tr ng-repeat="stat in allCrimes">
+      <td>{{stat.type}}</td>
+      <td>{{stat.time}}</td>
+      <td>{{stat.reportedBy}}</td>
+      <td>{{stat.zipCode}}</td>
+      <!-- <td>{{stat.phoneNumber}}</td> -->
+      <td>{{stat.message}}</td>
+      <td>{{stat.email}}</td>
     </tr>
   </table>
 </div>
